@@ -1,0 +1,195 @@
+# hubverse
+
+> The hubverse is a set of open-source software and data standards for collaborative modeling hubs: repositories where teams submit forecasts or scenario projections in a shared format, which are then validated, stored, ensembled, evaluated and visualised. It is developed by the Consortium of Infectious Disease Modeling Hubs.
+
+This file indexes everything the hubverse publishes. Start with the overview. Each R package site has its own llms.txt that lists every reference page and vignette as Markdown. catalog/repos.json and catalog/sources.json hold the same information in machine-readable form, and catalog/domains.txt lists every domain the documentation links to.
+
+## Overview
+
+- [Hubverse overview](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/overview.md): concepts, architecture and which repository does what
+- [hubverse.io](https://hubverse.io/): public landing page, quickstarts by role, community
+- [docs.hubverse.io](https://docs.hubverse.io/en/latest/): technical documentation for hub administrators, modelers and developers
+- [Mailing list and community meetings](https://groups.io/g/hubverse)
+
+## Documentation (docs.hubverse.io)
+
+- [Code of Conduct Committee](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/committee.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/committee.html
+- [Contributor Covenant Code of Conduct](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/covenant.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/covenant.html
+- [Enforcement manual](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/enforcement-manual.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/enforcement-manual.html
+- [AWS Onboarding (and Offboarding)](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/cloud-onboarding.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/cloud-onboarding.html
+- [Local Dashboard Workflow](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-local.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-local.html
+- [Evaluations dashboard](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-predevals.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-predevals.html
+- [Forecasts dashboard](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-predtimechart.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-predtimechart.html
+- [Generating the Dashboard Website](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-site.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-site.html
+- [Staging dashboard changes](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-staging.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-staging.html
+- [Dashboard Tools](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-tools.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-tools.html
+- [Dashboard operational workflows](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-workflows.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-workflows.html
+- [Releasing Hotfixes](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/hotfix.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/hotfix.html
+- [Developer Guide](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/index.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/index.html
+- [Python Development and Releases](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/python.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/python.html
+- [R Release Process](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/r.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/r.html
+- [Hubverse Release Process](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/release-process.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/release-process.html
+- [Security Policies](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/security.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/security.html
+- [The hubverse: open tools for collaborative modeling](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/index.md): home, rendered at https://docs.hubverse.io/en/latest/index.html
+- [Abbreviations](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/abbreviations.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/abbreviations.html
+- [How to cite](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/cite.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/cite.html
+- [Contact](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/contact.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/contact.html
+- [Terminology](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/terminology.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/terminology.html
+- [Who is the hubverse for?](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/who-uses-hubverse.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/who-uses-hubverse.html
+- [Setting up continuous integration via GitHub Actions](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/continuous-integration.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/continuous-integration.html
+- [Getting started](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/getting-started.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/getting-started.html
+- [Introduction](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/intro.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/intro.html
+- [Configuring model metadata](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/model-metadata-schema.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/model-metadata-schema.html
+- [Scripting task configuration](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/scripting-task-config.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/scripting-task-config.html
+- [Setting up a simple modeling hub](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/setting-up.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/setting-up.html
+- [Configuring tasks](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/tasks-config.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/tasks-config.html
+- [Uploading and validating config files](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/uploading-validating.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/uploading-validating.html
+- [Using the modeling hub](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/using-hub.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/using-hub.html
+- [Dashboards](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/dashboards.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/dashboards.html
+- [Data storage](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/data-storage.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/data-storage.html
+- [Hub configuration files](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/hub-config.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/hub-config.html
+- [Structure of hub repositories](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/hub-structure.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/hub-structure.html
+- [Overview](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/intro-data-formats.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/intro-data-formats.html
+- [Model abstracts](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-abstracts.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-abstracts.html
+- [Model metadata](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-metadata.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-metadata.html
+- [Model output](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-output.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-output.html
+- [Sample output type](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/sample-output-type.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/sample-output-type.html
+- [Software](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/software.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/software.html
+- [Target (observed) data](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/target-data.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/target-data.html
+- [Defining modeling tasks](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/tasks.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/tasks.html
+
+## hubverse.io pages
+
+- [Contributing to the hubverse site](https://hubverse.io/CONTRIBUTING.html)
+- [About the hubverse](https://hubverse.io/about.html)
+- [How to cite](https://hubverse.io/cite.html)
+- [Contributors to the hubverse repositories](https://hubverse.io/community/contributors.html)
+- [List of hubs](https://hubverse.io/community/hubs.html)
+- [Community](https://hubverse.io/community/index.html)
+- [Contact](https://hubverse.io/contact.html)
+- [Funding supporting the hubverse](https://hubverse.io/funding.html)
+- [hubverse](https://hubverse.io/index.html)
+- [Analyze data](https://hubverse.io/quickstart/analyze.html)
+- [Create a hub](https://hubverse.io/quickstart/create.html)
+- [Develop software](https://hubverse.io/quickstart/develop.html)
+- [What is a modeling hub?](https://hubverse.io/quickstart/index.html)
+- [Submit model output](https://hubverse.io/quickstart/submit.html)
+- [Consulting support](https://hubverse.io/quickstart/support-consulting.html)
+- [Research & talks](https://hubverse.io/researchtalks.html)
+- [Terminology](https://hubverse.io/terminology.html)
+- [Dashboards](https://hubverse.io/tools/dashboards.html)
+- [Data standards](https://hubverse.io/tools/data.html)
+- [Software](https://hubverse.io/tools/software.html)
+- [Trainings](https://hubverse.io/trainings.html)
+
+## Core R packages
+
+Install together with the hubverse meta-package. Hub administration, data access, validation, ensembling, evaluation and plotting.
+
+- [hubverse](https://github.com/hubverse-org/hubverse): Easily install and load packages from the hubverse; README: https://raw.githubusercontent.com/hubverse-org/hubverse/main/README.md
+- [hubUtils](https://github.com/hubverse-org/hubUtils): Utility functions for Infectious Disease Modeling Hubs; page index: https://hubverse-org.github.io/hubUtils/llms.txt
+- [hubAdmin](https://github.com/hubverse-org/hubAdmin): Utilities for administering hubverse Infectious Disease Modeling Hubs; page index: https://hubverse-org.github.io/hubAdmin/llms.txt
+- [hubData](https://github.com/hubverse-org/hubData): Tools for accessing and working with hubverse Hub data; page index: https://hubverse-org.github.io/hubData/llms.txt
+- [hubValidations](https://github.com/hubverse-org/hubValidations): Testing framework for hubverse hub validations; page index: https://hubverse-org.github.io/hubValidations/llms.txt
+- [hubEnsembles](https://github.com/hubverse-org/hubEnsembles): Ensemble methods for combining hub model outputs; page index: https://hubverse-org.github.io/hubEnsembles/dev/llms.txt
+- [hubEvals](https://github.com/hubverse-org/hubEvals): page index: https://hubverse-org.github.io/hubEvals/llms.txt
+- [hubVis](https://github.com/hubverse-org/hubVis): Plotting methods for hub model outputs; page index: https://hubverse-org.github.io/hubVis/dev/llms.txt
+- [hubExamples](https://github.com/hubverse-org/hubExamples): This package provides example data for forecasting and scenario modeling hubs in the hubverse format; page index: https://hubverse-org.github.io/hubExamples/llms.txt
+
+## Python tools
+
+Python access to hub data and the transform used when model output is mirrored to the cloud.
+
+- [hub-data](https://github.com/hubverse-org/hub-data): Python tools for accessing and working with hubverse Hub data; docs: https://hubverse-org.github.io/hub-data/
+- [hubverse-transform](https://github.com/hubverse-org/hubverse-transform): Data transform functions for hubverse model-output files; README: https://raw.githubusercontent.com/hubverse-org/hubverse-transform/main/README.md
+- [hubDataPy](https://github.com/hubverse-org/hubDataPy): A Python version of hubData; README: https://raw.githubusercontent.com/hubverse-org/hubDataPy/main/README.md; archived
+
+## Schemas
+
+JSON schemas that define valid hub configuration files. Versioned; docs.hubverse.io tracks one schema release.
+
+- [schemas](https://github.com/hubverse-org/schemas): JSON schemas for modeling hubs; README: https://raw.githubusercontent.com/hubverse-org/schemas/main/README.md
+
+## Documentation and websites
+
+User and developer documentation, the public landing page and the org profile.
+
+- [hubDocs](https://github.com/hubverse-org/hubDocs): This is the source for docs.hubverse.io. It is built with ReadTheDocs; docs: https://docs.hubverse.io/en/latest/
+- [hubverse-site](https://github.com/hubverse-org/hubverse-site): Landing page for the hubverse; docs: https://hubverse.io/
+- [.github](https://github.com/hubverse-org/.github): Organisation profile; README: https://raw.githubusercontent.com/hubverse-org/.github/main/README.md
+
+## Dashboards
+
+Template, builders and operational workflows for hub dashboards (forecast visualisation and evaluation).
+
+- [hub-dashboard-template](https://github.com/hubverse-org/hub-dashboard-template): Template Hubverse Dashboard Repository; docs: https://hubverse-org.github.io/hub-dashboard-template/
+- [hub-dashboard-predtimechart](https://github.com/hubverse-org/hub-dashboard-predtimechart): An initial dashboard that provides a predtimechart-based forecast visualization component for the hub; README: https://raw.githubusercontent.com/hubverse-org/hub-dashboard-predtimechart/main/README.md
+- [hub-dash-site-builder](https://github.com/hubverse-org/hub-dash-site-builder): Docker container to build a hub dashboard website with Quarto; README: https://raw.githubusercontent.com/hubverse-org/hub-dash-site-builder/main/README.md
+- [hubPredEvalsData](https://github.com/hubverse-org/hubPredEvalsData): Evaluates a hub's predictions and generates data objects of scores to be displayed on a dashboard using predevals; page index: https://hubverse-org.github.io/hubPredEvalsData/llms.txt
+- [hubPredEvalsData-docker](https://github.com/hubverse-org/hubPredEvalsData-docker): docker container to calculate hub evals data; README: https://raw.githubusercontent.com/hubverse-org/hubPredEvalsData-docker/main/README.md
+- [predevals](https://github.com/hubverse-org/predevals): A JavaScript module for interactive exploration of forecast evaluations; README: https://raw.githubusercontent.com/hubverse-org/predevals/main/README.md
+- [hub-dashboard-control-room](https://github.com/hubverse-org/hub-dashboard-control-room): Operational workflows for registered hubverse dashboards; README: https://raw.githubusercontent.com/hubverse-org/hub-dashboard-control-room/main/README.md
+- [dashboard-test-hub](https://github.com/hubverse-org/dashboard-test-hub): Test fixture hub for dashboard pipeline development (fork of example-complex-forecast-hub); README: https://raw.githubusercontent.com/hubverse-org/dashboard-test-hub/main/README.md
+- [dashboard-test-hub-dashboard](https://github.com/hubverse-org/dashboard-test-hub-dashboard): Test dashboard for dashboard pipeline development (paired with dashboard-test-hub); docs: https://hubverse-org.github.io/dashboard-test-hub-dashboard/
+
+## Cloud infrastructure
+
+AWS resources and test hubs for mirroring hub data to S3.
+
+- [hubverse-infrastructure](https://github.com/hubverse-org/hubverse-infrastructure): Infrastructure as code for Hubverse AWS resources; README: https://raw.githubusercontent.com/hubverse-org/hubverse-infrastructure/main/README.md
+- [hubverse-cloud](https://github.com/hubverse-org/hubverse-cloud): Test hub for S3 data submission and storage; README: https://raw.githubusercontent.com/hubverse-org/hubverse-cloud/main/README.md
+
+## CI, actions and developer tooling
+
+GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, health checks, R-universe and shared Claude Code skills.
+
+- [hubverse-actions](https://github.com/hubverse-org/hubverse-actions): GitHub Actions for common hubverse CI tasks; README: https://raw.githubusercontent.com/hubverse-org/hubverse-actions/main/README.md
+- [hubverse-developer-actions](https://github.com/hubverse-org/hubverse-developer-actions): GitHub Actions for common hubverse developer CI tasks; README: https://raw.githubusercontent.com/hubverse-org/hubverse-developer-actions/main/README.md
+- [hubCI](https://github.com/hubverse-org/hubCI): Toolbox for hubverse Continuous Integration; page index: https://hubverse-org.github.io/hubCI/llms.txt
+- [hubDevs](https://github.com/hubverse-org/hubDevs): Utilities for creating and standardising Hubverse packages; page index: https://hubverse-org.github.io/hubDevs/llms.txt
+- [hubStyle](https://github.com/hubverse-org/hubStyle): pkgdown template and utilities for hubverse docs; page index: https://hubverse-org.github.io/hubStyle/llms.txt
+- [pkg-health-check](https://github.com/hubverse-org/pkg-health-check): Workflows to regularly check the health of hubverse packages; README: https://raw.githubusercontent.com/hubverse-org/pkg-health-check/main/README.md
+- [hubverse-org.r-universe.dev](https://github.com/hubverse-org/hubverse-org.r-universe.dev): R-Universe configuration for the HubVerse; docs: https://hubverse-org.r-universe.dev/
+- [hubverse-claude-skills](https://github.com/hubverse-org/hubverse-claude-skills): Shared Claude Code skills for hubverse development workflows; README: https://raw.githubusercontent.com/hubverse-org/hubverse-claude-skills/main/README.md
+- [test-docker-hubUtils-dev](https://github.com/hubverse-org/test-docker-hubUtils-dev): [test] containerized hubUtils (development version); README: https://raw.githubusercontent.com/hubverse-org/test-docker-hubUtils-dev/main/README.md
+- [test-docker-hubValidations](https://github.com/hubverse-org/test-docker-hubValidations): [test] containerized hubValidations; README: https://raw.githubusercontent.com/hubverse-org/test-docker-hubValidations/main/README.md
+
+## Example, template and test hubs
+
+Hubs used as templates, examples in documentation and fixtures in CI.
+
+- [hubTemplate](https://github.com/hubverse-org/hubTemplate): README: https://raw.githubusercontent.com/hubverse-org/hubTemplate/main/README.md
+- [example-simple-forecast-hub](https://github.com/hubverse-org/example-simple-forecast-hub): README: https://raw.githubusercontent.com/hubverse-org/example-simple-forecast-hub/main/README.md
+- [example-complex-forecast-hub](https://github.com/hubverse-org/example-complex-forecast-hub): An example of a forecast hub with a complex set of modeling tasks; README: https://raw.githubusercontent.com/hubverse-org/example-complex-forecast-hub/main/README.md
+- [example-complex-scenario-hub](https://github.com/hubverse-org/example-complex-scenario-hub): An example scenario modeling hub; README: https://raw.githubusercontent.com/hubverse-org/example-complex-scenario-hub/main/README.md
+- [ci-testhub-simple](https://github.com/hubverse-org/ci-testhub-simple): README: https://raw.githubusercontent.com/hubverse-org/ci-testhub-simple/main/README.md
+- [ci-testhub-simple-old-orgname](https://github.com/hubverse-org/ci-testhub-simple-old-orgname): README: https://raw.githubusercontent.com/hubverse-org/ci-testhub-simple-old-orgname/main/README.md
+- [ci-testhub-target](https://github.com/hubverse-org/ci-testhub-target): README: https://raw.githubusercontent.com/hubverse-org/ci-testhub-target/main/README.md
+
+## Related repositories outside hubverse-org
+
+- [reichlab/predtimechart](https://github.com/reichlab/predtimechart): JavaScript forecast visualisation component used by hub dashboards.
+- [epiforecasts/scoringutils](https://github.com/epiforecasts/scoringutils): R package for scoring forecasts. hubEvals builds on it.
+- [reichlab/zoltr](https://github.com/reichlab/zoltr): R client for the Zoltar forecast repository.
+
+## Optional
+
+- [Repository catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/repos.json)
+- [Documentation page catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/sources.json)
+- [Linked domains](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/domains.txt)
+- [Linked external URLs](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/links.txt)
+
+## Data archives
+
+Historical hubs converted to the hubverse format.
+
+- [covid19-forecast-hub-archive](https://github.com/hubverse-org/covid19-forecast-hub-archive): Archive of original COVID-19 Forecast Hub data in Hubverse format; README: https://raw.githubusercontent.com/hubverse-org/covid19-forecast-hub-archive/main/README.md
+- [flusight_hub_archive](https://github.com/hubverse-org/flusight_hub_archive): Hubversion of FluSight 1 (2015-2019); README: https://raw.githubusercontent.com/hubverse-org/flusight_hub_archive/main/README.md
+
+## Publications and talks
+
+Manuscripts and conference talk materials.
+
+- [hubEnsemblesManuscript](https://github.com/hubverse-org/hubEnsemblesManuscript): Repository for "Multi-Model Ensembles in Infectious Disease and Public Health: Methods, Interpretation, and Implementation in R"; README: https://raw.githubusercontent.com/hubverse-org/hubEnsemblesManuscript/master/README.md
+- [hubverse-talk-RSECon26](https://github.com/hubverse-org/hubverse-talk-RSECon26): Slides and materials for the hubverse talk @ RSECon26; docs: https://hubverse-org.github.io/hubverse-talk-RSECon26/
+- [hubverse-talk-usrse25](https://github.com/hubverse-org/hubverse-talk-usrse25): Slides and materials for the hubverse talk @ US RSE Conference 2025; docs: https://hubverse-org.github.io/hubverse-talk-usrse25/

@@ -1,0 +1,100 @@
+# Hand-maintained grouping of hubverse-org repositories.
+# scripts/build.py lists every repository in the org. A repository that
+# is not named here appears under "Uncategorised" in llms.txt, so a new
+# repository is never silently left out.
+
+[[category]]
+key = "core-r"
+title = "Core R packages"
+summary = "Install together with the hubverse meta-package. Hub administration, data access, validation, ensembling, evaluation and plotting."
+repos = [
+  "hubverse", "hubUtils", "hubAdmin", "hubData", "hubValidations",
+  "hubEnsembles", "hubEvals", "hubVis", "hubExamples",
+]
+
+[[category]]
+key = "python"
+title = "Python tools"
+summary = "Python access to hub data and the transform used when model output is mirrored to the cloud."
+repos = ["hub-data", "hubverse-transform", "hubDataPy"]
+
+[[category]]
+key = "schemas"
+title = "Schemas"
+summary = "JSON schemas that define valid hub configuration files. Versioned; docs.hubverse.io tracks one schema release."
+repos = ["schemas"]
+
+[[category]]
+key = "docs"
+title = "Documentation and websites"
+summary = "User and developer documentation, the public landing page and the org profile."
+repos = ["hubDocs", "hubverse-site", ".github"]
+
+[[category]]
+key = "dashboards"
+title = "Dashboards"
+summary = "Template, builders and operational workflows for hub dashboards (forecast visualisation and evaluation)."
+repos = [
+  "hub-dashboard-template", "hub-dashboard-predtimechart",
+  "hub-dash-site-builder", "hubPredEvalsData", "hubPredEvalsData-docker",
+  "predevals", "hub-dashboard-control-room",
+  "dashboard-test-hub", "dashboard-test-hub-dashboard",
+]
+
+[[category]]
+key = "cloud"
+title = "Cloud infrastructure"
+summary = "AWS resources and test hubs for mirroring hub data to S3."
+repos = ["hubverse-infrastructure", "hubverse-cloud"]
+
+[[category]]
+key = "ci"
+title = "CI, actions and developer tooling"
+summary = "GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, health checks, R-universe and shared Claude Code skills."
+repos = [
+  "hubverse-actions", "hubverse-developer-actions", "hubCI", "hubDevs",
+  "hubStyle", "pkg-health-check", "hubverse-org.r-universe.dev",
+  "hubverse-claude-skills", "test-docker-hubUtils-dev",
+  "test-docker-hubValidations",
+]
+
+[[category]]
+key = "example-hubs"
+title = "Example, template and test hubs"
+summary = "Hubs used as templates, examples in documentation and fixtures in CI."
+repos = [
+  "hubTemplate", "example-simple-forecast-hub",
+  "example-complex-forecast-hub", "example-complex-scenario-hub",
+  "ci-testhub-simple", "ci-testhub-simple-old-orgname", "ci-testhub-target",
+]
+
+[[category]]
+key = "archives"
+title = "Data archives"
+summary = "Historical hubs converted to the hubverse format."
+repos = ["covid19-forecast-hub-archive", "flusight_hub_archive"]
+optional = true
+
+[[category]]
+key = "outreach"
+title = "Publications and talks"
+summary = "Manuscripts and conference talk materials."
+repos = [
+  "hubEnsemblesManuscript", "hubverse-talk-RSECon26",
+  "hubverse-talk-usrse25",
+]
+optional = true
+
+# Repositories outside hubverse-org that the hubverse depends on or that
+# hubverse developers work in.
+[[external]]
+repo = "reichlab/predtimechart"
+summary = "JavaScript forecast visualisation component used by hub dashboards."
+
+[[external]]
+repo = "epiforecasts/scoringutils"
+summary = "R package for scoring forecasts. hubEvals builds on it."
+
+[[external]]
+repo = "reichlab/zoltr"
+summary = "R client for the Zoltar forecast repository."
