@@ -141,7 +141,7 @@ AWS resources and test hubs for mirroring hub data to S3.
 
 ## CI, actions and developer tooling
 
-GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, health checks, R-universe and shared Claude Code skills.
+GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, health checks and R-universe.
 
 - [hubverse-actions](https://github.com/hubverse-org/hubverse-actions): GitHub Actions for common hubverse CI tasks; README: https://raw.githubusercontent.com/hubverse-org/hubverse-actions/main/README.md
 - [hubverse-developer-actions](https://github.com/hubverse-org/hubverse-developer-actions): GitHub Actions for common hubverse developer CI tasks; README: https://raw.githubusercontent.com/hubverse-org/hubverse-developer-actions/main/README.md
@@ -150,9 +150,15 @@ GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, heal
 - [hubStyle](https://github.com/hubverse-org/hubStyle): pkgdown template and utilities for hubverse docs; page index: https://hubverse-org.github.io/hubStyle/llms.txt
 - [pkg-health-check](https://github.com/hubverse-org/pkg-health-check): Workflows to regularly check the health of hubverse packages; README: https://raw.githubusercontent.com/hubverse-org/pkg-health-check/main/README.md
 - [hubverse-org.r-universe.dev](https://github.com/hubverse-org/hubverse-org.r-universe.dev): R-Universe configuration for the HubVerse; docs: https://hubverse-org.r-universe.dev/
-- [hubverse-claude-skills](https://github.com/hubverse-org/hubverse-claude-skills): Shared Claude Code skills for hubverse development workflows; README: https://raw.githubusercontent.com/hubverse-org/hubverse-claude-skills/main/README.md
 - [test-docker-hubUtils-dev](https://github.com/hubverse-org/test-docker-hubUtils-dev): [test] containerized hubUtils (development version); README: https://raw.githubusercontent.com/hubverse-org/test-docker-hubUtils-dev/main/README.md
 - [test-docker-hubValidations](https://github.com/hubverse-org/test-docker-hubValidations): [test] containerized hubValidations; README: https://raw.githubusercontent.com/hubverse-org/test-docker-hubValidations/main/README.md
+
+## LLM harness
+
+Context and skills that let LLM-based tools work with the hubverse.
+
+- [hubverse-llm-index](https://github.com/hubverse-org/hubverse-llm-index): Index of hubverse repositories, documentation and linked resources for LLM-powered tools; README: https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/README.md
+- [hubverse-claude-skills](https://github.com/hubverse-org/hubverse-claude-skills): Shared Claude Code skills for hubverse development workflows; README: https://raw.githubusercontent.com/hubverse-org/hubverse-claude-skills/main/README.md
 
 ## Example, template and test hubs
 
@@ -166,15 +172,26 @@ Hubs used as templates, examples in documentation and fixtures in CI.
 - [ci-testhub-simple-old-orgname](https://github.com/hubverse-org/ci-testhub-simple-old-orgname): README: https://raw.githubusercontent.com/hubverse-org/ci-testhub-simple-old-orgname/main/README.md
 - [ci-testhub-target](https://github.com/hubverse-org/ci-testhub-target): README: https://raw.githubusercontent.com/hubverse-org/ci-testhub-target/main/README.md
 
-## Related repositories outside hubverse-org
+## Software the hubverse builds on
 
-- [reichlab/predtimechart](https://github.com/reichlab/predtimechart): JavaScript forecast visualisation component used by hub dashboards.
-- [epiforecasts/scoringutils](https://github.com/epiforecasts/scoringutils): R package for scoring forecasts. hubEvals builds on it.
-- [reichlab/zoltr](https://github.com/reichlab/zoltr): R client for the Zoltar forecast repository.
+- [scoringutils](https://epiforecasts.io/scoringutils/): Scores forecasts. hubEvals and hubPredEvalsData score predictions with it; page index: https://epiforecasts.io/scoringutils/llms.txt
+- [arrow (R)](https://arrow.apache.org/docs/r/): Reads and queries Parquet and CSV datasets. hubData and hubValidations read model output and target data with it; page index: https://arrow.apache.org/docs/r/llms.txt
+- [pyarrow](https://arrow.apache.org/docs/python/): Python library for Arrow and Parquet. hub-data and hubverse-transform read and write hub data with it
+- [jsonvalidate](https://docs.ropensci.org/jsonvalidate/): Validates JSON against a JSON schema. hubAdmin, hubValidations and hubPredEvalsData validate configuration files with it; page index: https://docs.ropensci.org/jsonvalidate/llms.txt
+- [distfromq](http://reichlab.io/distfromq/): Reconstructs a distribution from a set of quantiles. hubEnsembles uses it for linear pool ensembles of quantile forecasts; page index: http://reichlab.io/distfromq/llms.txt
+- [zoltr](http://reichlab.io/zoltr/): R client for the Zoltar forecast repository. hubData uses it to collect forecasts from Zoltar
+- [predtimechart](https://github.com/reichlab/predtimechart): JavaScript forecast visualisation component. hub-dashboard-predtimechart builds the dashboard forecast view on it
+
+## R packages that build on the hubverse
+
+Packages outside hubverse-org, on CRAN or R-universe, that import hubverse packages.
+
+- [modelimportance](https://mkim425.github.io/modelimportance/): Measuring Contributions of Component Models to Ensemble Forecast Accuracy. Uses hubEnsembles, hubEvals, hubUtils; page index: https://mkim425.github.io/modelimportance/llms.txt
 
 ## Optional
 
 - [Repository catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/repos.json)
+- [Related software catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/related.json)
 - [Documentation page catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/sources.json)
 - [Linked domains](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/domains.txt)
 - [Linked external URLs](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/links.txt)

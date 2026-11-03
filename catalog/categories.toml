@@ -50,13 +50,18 @@ repos = ["hubverse-infrastructure", "hubverse-cloud"]
 [[category]]
 key = "ci"
 title = "CI, actions and developer tooling"
-summary = "GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, health checks, R-universe and shared Claude Code skills."
+summary = "GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, health checks and R-universe."
 repos = [
   "hubverse-actions", "hubverse-developer-actions", "hubCI", "hubDevs",
   "hubStyle", "pkg-health-check", "hubverse-org.r-universe.dev",
-  "hubverse-claude-skills", "test-docker-hubUtils-dev",
-  "test-docker-hubValidations",
+  "test-docker-hubUtils-dev", "test-docker-hubValidations",
 ]
+
+[[category]]
+key = "llm-harness"
+title = "LLM harness"
+summary = "Context and skills that let LLM-based tools work with the hubverse."
+repos = ["hubverse-llm-index", "hubverse-claude-skills"]
 
 [[category]]
 key = "example-hubs"
@@ -85,16 +90,44 @@ repos = [
 ]
 optional = true
 
-# Repositories outside hubverse-org that the hubverse depends on or that
-# hubverse developers work in.
+# Software outside hubverse-org that hubverse tools build on. Listed in
+# llms.txt in this order. `docs` is needed only when the repository's
+# homepage is not the documentation of this package, as for the arrow
+# monorepo. Packages that depend on the hubverse are found by
+# scripts/build.py and are not listed here.
 [[external]]
-repo = "reichlab/predtimechart"
-summary = "JavaScript forecast visualisation component used by hub dashboards."
-
-[[external]]
+name = "scoringutils"
 repo = "epiforecasts/scoringutils"
-summary = "R package for scoring forecasts. hubEvals builds on it."
+summary = "Scores forecasts. hubEvals and hubPredEvalsData score predictions with it."
 
 [[external]]
+name = "arrow (R)"
+repo = "apache/arrow"
+docs = "https://arrow.apache.org/docs/r/"
+summary = "Reads and queries Parquet and CSV datasets. hubData and hubValidations read model output and target data with it."
+
+[[external]]
+name = "pyarrow"
+repo = "apache/arrow"
+docs = "https://arrow.apache.org/docs/python/"
+summary = "Python library for Arrow and Parquet. hub-data and hubverse-transform read and write hub data with it."
+
+[[external]]
+name = "jsonvalidate"
+repo = "ropensci/jsonvalidate"
+summary = "Validates JSON against a JSON schema. hubAdmin, hubValidations and hubPredEvalsData validate configuration files with it."
+
+[[external]]
+name = "distfromq"
+repo = "reichlab/distfromq"
+summary = "Reconstructs a distribution from a set of quantiles. hubEnsembles uses it for linear pool ensembles of quantile forecasts."
+
+[[external]]
+name = "zoltr"
 repo = "reichlab/zoltr"
-summary = "R client for the Zoltar forecast repository."
+summary = "R client for the Zoltar forecast repository. hubData uses it to collect forecasts from Zoltar."
+
+[[external]]
+name = "predtimechart"
+repo = "reichlab/predtimechart"
+summary = "JavaScript forecast visualisation component. hub-dashboard-predtimechart builds the dashboard forecast view on it."

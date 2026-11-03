@@ -10,8 +10,9 @@ It is a context source for language model tools such as chatbots, agents and ski
 |------|---------|
 | [`llms.txt`](llms.txt) | Entry point in the [llms.txt](https://llmstxt.org/) format. Generated. |
 | [`overview.md`](overview.md) | What the hubverse is, how the pieces fit together, where to start by role. Hand-written. |
-| [`catalog/categories.toml`](catalog/categories.toml) | Grouping of repositories and related external repositories. Hand-written. |
+| [`catalog/categories.toml`](catalog/categories.toml) | Grouping of repositories, and the software outside the org that hubverse tools build on. Hand-written. |
 | [`catalog/repos.json`](catalog/repos.json) | One record per org repository: description, category, repository, issues, README, docs and llms.txt URLs. Generated. |
+| [`catalog/related.json`](catalog/related.json) | Software the hubverse builds on, and R packages on CRAN or R-universe that import hubverse packages, with docs and llms.txt URLs. Generated. |
 | [`catalog/sources.json`](catalog/sources.json) | One record per documentation page, with a Markdown URL where one exists. Generated. |
 | [`catalog/domains.txt`](catalog/domains.txt) | Every domain the documentation links to, with link counts. Generated. |
 | [`catalog/links.txt`](catalog/links.txt) | Every external URL the documentation links to. Generated. |

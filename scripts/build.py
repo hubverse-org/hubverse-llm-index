@@ -7,6 +7,8 @@ link the pages contain, and writes:
 
   llms.txt               entry point in llmstxt.org format
   catalog/repos.json     one record per org repository
+  catalog/related.json   software the hubverse builds on, and R packages
+                         that build on the hubverse
   catalog/sources.json   one record per documentation page
   catalog/domains.txt    every domain linked from the documentation
   catalog/links.txt      every external URL linked from the documentation
@@ -33,6 +35,8 @@ from urllib.parse import urljoin, urlparse
 ROOT = Path(__file__).resolve().parent.parent
 USER_AGENT = "hubverse-llm-index-builder"
 API = "https://api.github.com"
+R_UNIVERSE_API = "https://r-universe.dev/api"
+HARD_DEPENDENCIES = {"Depends", "Imports", "LinkingTo"}
 DOCS_SITE = "https://docs.hubverse.io/en/latest/"
 LANDING_SITE = "https://hubverse.io/"
 URL_RE = re.compile(r"https?://[^\s<>\"'`)\]}]+")
@@ -84,18 +88,24 @@ def site_base(url: str) -> str:
     return url if url.endswith("/") else url + "/"
 
 
-def find_docs(repo: dict, org: str) -> tuple[str | None, str | None]:
-    """Return the repository's documentation URL and llms.txt URL.
+def docs_candidates(repo: dict) -> list[str]:
+    """Possible documentation sites of a GitHub repository."""
+    bases = []
+    if repo.get("homepage"):
+        bases.append(site_base(repo["homepage"]))
+    owner = repo["owner"]["login"].lower()
+    pages_base = f"https://{owner}.github.io/{repo['name']}/"
+    if repo.get("has_pages") and pages_base not in bases:
+        bases.append(pages_base)
+    return bases
+
+
+def find_docs(bases: list[str]) -> tuple[str | None, str | None]:
+    """Return the documentation URL and llms.txt URL of the first site found.
 
     Note that some pkgdown sites only publish the development build, under
     dev/, so dev/llms.txt is tried as well as llms.txt.
     """
-    bases = []
-    if repo.get("homepage"):
-        bases.append(site_base(repo["homepage"]))
-    pages_base = f"https://{org.lower()}.github.io/{repo['name']}/"
-    if repo.get("has_pages") and pages_base not in bases:
-        bases.append(pages_base)
     for base in bases:
         for candidate in (base, urljoin(base, "../")):
             for path in ("llms.txt", "dev/llms.txt"):
@@ -115,7 +125,7 @@ def category_lookup(config: dict) -> dict[str, str]:
 
 
 def repo_record(repo: dict, org: str, categories: dict[str, str]) -> dict:
-    docs, llms = find_docs(repo, org)
+    docs, llms = find_docs(docs_candidates(repo))
     branch = repo["default_branch"]
     return {
         "name": repo["name"],
@@ -134,6 +144,93 @@ def repo_record(repo: dict, org: str, categories: dict[str, str]) -> dict:
         "docs_url": docs,
         "llms_txt_url": llms,
     }
+
+
+def github_repo(full_name: str, token: str | None) -> dict | None:
+    status, text = fetch(f"{API}/repos/{full_name}", token)
+    return json.loads(text) if status == 200 else None
+
+
+def dependency_record(entry: dict, token: str | None) -> dict:
+    """A package from the `external` list in categories.toml."""
+    repo = github_repo(entry["repo"], token)
+    if "docs" in entry:
+        bases = [site_base(entry["docs"])]
+    else:
+        bases = docs_candidates(repo) if repo else []
+    docs, llms = find_docs(bases)
+    return {
+        "name": entry["name"],
+        "summary": entry["summary"],
+        "repo_url": f"https://github.com/{entry['repo']}",
+        "docs_url": docs,
+        "llms_txt_url": llms,
+    }
+
+
+def org_r_packages(org: str) -> set[str]:
+    status, text = fetch(
+        f"https://{org.lower()}.r-universe.dev/api/packages?fields=Package")
+    return {p["Package"] for p in json.loads(text)} if status == 200 else set()
+
+
+def dependent_record(
+    name: str, user: str, packages: set[str], token: str | None,
+) -> dict | None:
+    """An R package outside the org that imports a hubverse package.
+
+    Returns None when the package depends on the hubverse only through
+    another package.
+    """
+    status, text = fetch(f"https://{user}.r-universe.dev/api/packages/{name}")
+    if status != 200:
+        return None
+    description = json.loads(text)
+    uses = sorted(
+        d["package"] for d in description.get("_dependencies", [])
+        if d["role"] in HARD_DEPENDENCIES and d["package"] in packages
+    )
+    if not uses:
+        return None
+    remote = description.get("RemoteUrl") or ""
+    repo = None
+    if urlparse(remote).hostname == "github.com":
+        repo = github_repo(urlparse(remote).path.strip("/"), token)
+    docs, llms = find_docs(docs_candidates(repo) if repo else [])
+    return {
+        "name": name,
+        "title": " ".join(description.get("Title", "").split()),
+        "uses": uses,
+        "repo_url": repo["html_url"] if repo else remote or None,
+        "docs_url": docs or f"https://{user}.r-universe.dev/{name}",
+        "llms_txt_url": llms,
+    }
+
+
+def r_dependents(org: str, token: str | None) -> list[dict]:
+    """R packages outside the org that import hubverse packages.
+
+    R-universe indexes CRAN and every other universe. Its `needs:` search
+    follows hard dependencies recursively, so each match is checked against
+    its own DESCRIPTION by dependent_record().
+    """
+    packages = org_r_packages(org)
+    found: dict[str, str] = {}
+    for package in sorted(packages):
+        status, text = fetch(
+            f"{R_UNIVERSE_API}/search?q=needs:{package}&limit=500")
+        if status != 200:
+            continue
+        for hit in json.loads(text)["results"]:
+            # Note that other universes can hold copies of hubverse packages.
+            if hit["_user"].lower() == org.lower() or hit["Package"] in packages:
+                continue
+            found.setdefault(hit["Package"], hit["_user"])
+    records = [
+        dependent_record(name, user, packages, token)
+        for name, user in sorted(found.items())
+    ]
+    return [r for r in records if r]
 
 
 def hubdocs_pages(org: str, token: str | None) -> list[dict]:
@@ -237,7 +334,8 @@ def is_internal(url: str, org: str) -> bool:
 
 
 def render_llms_txt(
-    config: dict, repos: list[dict], sources: list[dict], kb_base: str,
+    config: dict, repos: list[dict], related: dict, sources: list[dict],
+    kb_base: str,
 ) -> str:
     by_name = {r["name"]: r for r in repos}
     lines = [
@@ -312,17 +410,31 @@ def render_llms_txt(
     if unlisted:
         lines += ["", "## Uncategorised", ""]
         lines += [repo_line(r) for r in unlisted]
-    lines += ["", "## Related repositories outside hubverse-org", ""]
-    for ext in config.get("external", []):
-        lines.append(
-            f"- [{ext['repo']}](https://github.com/{ext['repo']}): "
-            f"{ext['summary']}"
-        )
+    def related_line(record: dict, text: str) -> str:
+        url = record["docs_url"] or record["repo_url"]
+        parts = [text.rstrip(".")]
+        if record["llms_txt_url"]:
+            parts.append(f"page index: {record['llms_txt_url']}")
+        return f"- [{record['name']}]({url}): " + "; ".join(parts)
+
+    lines += ["", "## Software the hubverse builds on", ""]
+    lines += [related_line(r, r["summary"]) for r in related["dependencies"]]
+    if related["dependents"]:
+        lines += [
+            "", "## R packages that build on the hubverse", "",
+            "Packages outside hubverse-org, on CRAN or R-universe, that "
+            "import hubverse packages.", "",
+        ]
+        lines += [
+            related_line(r, f"{r['title']}. Uses {', '.join(r['uses'])}")
+            for r in related["dependents"]
+        ]
     lines += [
         "",
         "## Optional",
         "",
         f"- [Repository catalog]({kb_base}catalog/repos.json)",
+        f"- [Related software catalog]({kb_base}catalog/related.json)",
         f"- [Documentation page catalog]({kb_base}catalog/sources.json)",
         f"- [Linked domains]({kb_base}catalog/domains.txt)",
         f"- [Linked external URLs]({kb_base}catalog/links.txt)",
@@ -369,6 +481,18 @@ def main() -> None:
           f"{sum(bool(r['llms_txt_url']) for r in repos)} with llms.txt",
           file=sys.stderr)
 
+    with ThreadPoolExecutor(args.workers) as pool:
+        dependencies = list(pool.map(
+            lambda e: dependency_record(e, args.token),
+            config.get("external", [])))
+    related = {
+        "dependencies": dependencies,
+        "dependents": r_dependents(args.org, args.token),
+    }
+    print(f"  {len(related['dependencies'])} dependencies, "
+          f"{len(related['dependents'])} R packages that build on the "
+          "hubverse", file=sys.stderr)
+
     links: set[str] = set()
     sources = hubdocs_pages(args.org, args.token) + landing_pages()
     with ThreadPoolExecutor(args.workers) as pool:
@@ -402,6 +526,8 @@ def main() -> None:
 
     catalog = args.out / "catalog"
     (catalog / "repos.json").write_text(json.dumps(repos, indent=2) + "\n")
+    (catalog / "related.json").write_text(
+        json.dumps(related, indent=2) + "\n")
     for s in sources:
         s.pop("status", None)
     sources.sort(key=lambda s: (s["site"], s["url"]))
@@ -412,7 +538,7 @@ def main() -> None:
         for host, count in sorted(domains.items(), key=lambda kv: kv[0])
     ))
     (args.out / "llms.txt").write_text(
-        render_llms_txt(config, repos, sources, args.kb_base))
+        render_llms_txt(config, repos, related, sources, args.kb_base))
 
     print(f"  {len(external)} external links across {len(domains)} domains",
           file=sys.stderr)

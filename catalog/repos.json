@@ -523,7 +523,7 @@
   {
     "name": "hubverse-claude-skills",
     "description": "Shared Claude Code skills for hubverse development workflows",
-    "category": "ci",
+    "category": "llm-harness",
     "archived": false,
     "language": "Python",
     "topics": [],
@@ -572,6 +572,20 @@
     "repo_url": "https://github.com/hubverse-org/hubverse-infrastructure",
     "issues_url": "https://github.com/hubverse-org/hubverse-infrastructure/issues",
     "readme_raw_url": "https://raw.githubusercontent.com/hubverse-org/hubverse-infrastructure/main/README.md",
+    "default_branch": "main",
+    "docs_url": null,
+    "llms_txt_url": null
+  },
+  {
+    "name": "hubverse-llm-index",
+    "description": "Index of hubverse repositories, documentation and linked resources for LLM-powered tools",
+    "category": "llm-harness",
+    "archived": false,
+    "language": "Python",
+    "topics": [],
+    "repo_url": "https://github.com/hubverse-org/hubverse-llm-index",
+    "issues_url": "https://github.com/hubverse-org/hubverse-llm-index/issues",
+    "readme_raw_url": "https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/README.md",
     "default_branch": "main",
     "docs_url": null,
     "llms_txt_url": null

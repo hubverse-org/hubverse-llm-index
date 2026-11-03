@@ -1,0 +1,67 @@
+{
+  "dependencies": [
+    {
+      "name": "scoringutils",
+      "summary": "Scores forecasts. hubEvals and hubPredEvalsData score predictions with it.",
+      "repo_url": "https://github.com/epiforecasts/scoringutils",
+      "docs_url": "https://epiforecasts.io/scoringutils/",
+      "llms_txt_url": "https://epiforecasts.io/scoringutils/llms.txt"
+    },
+    {
+      "name": "arrow (R)",
+      "summary": "Reads and queries Parquet and CSV datasets. hubData and hubValidations read model output and target data with it.",
+      "repo_url": "https://github.com/apache/arrow",
+      "docs_url": "https://arrow.apache.org/docs/r/",
+      "llms_txt_url": "https://arrow.apache.org/docs/r/llms.txt"
+    },
+    {
+      "name": "pyarrow",
+      "summary": "Python library for Arrow and Parquet. hub-data and hubverse-transform read and write hub data with it.",
+      "repo_url": "https://github.com/apache/arrow",
+      "docs_url": "https://arrow.apache.org/docs/python/",
+      "llms_txt_url": null
+    },
+    {
+      "name": "jsonvalidate",
+      "summary": "Validates JSON against a JSON schema. hubAdmin, hubValidations and hubPredEvalsData validate configuration files with it.",
+      "repo_url": "https://github.com/ropensci/jsonvalidate",
+      "docs_url": "https://docs.ropensci.org/jsonvalidate/",
+      "llms_txt_url": "https://docs.ropensci.org/jsonvalidate/llms.txt"
+    },
+    {
+      "name": "distfromq",
+      "summary": "Reconstructs a distribution from a set of quantiles. hubEnsembles uses it for linear pool ensembles of quantile forecasts.",
+      "repo_url": "https://github.com/reichlab/distfromq",
+      "docs_url": "http://reichlab.io/distfromq/",
+      "llms_txt_url": "http://reichlab.io/distfromq/llms.txt"
+    },
+    {
+      "name": "zoltr",
+      "summary": "R client for the Zoltar forecast repository. hubData uses it to collect forecasts from Zoltar.",
+      "repo_url": "https://github.com/reichlab/zoltr",
+      "docs_url": "http://reichlab.io/zoltr/",
+      "llms_txt_url": null
+    },
+    {
+      "name": "predtimechart",
+      "summary": "JavaScript forecast visualisation component. hub-dashboard-predtimechart builds the dashboard forecast view on it.",
+      "repo_url": "https://github.com/reichlab/predtimechart",
+      "docs_url": null,
+      "llms_txt_url": null
+    }
+  ],
+  "dependents": [
+    {
+      "name": "modelimportance",
+      "title": "Measuring Contributions of Component Models to Ensemble Forecast Accuracy",
+      "uses": [
+        "hubEnsembles",
+        "hubEvals",
+        "hubUtils"
+      ],
+      "repo_url": "https://github.com/mkim425/modelimportance",
+      "docs_url": "https://mkim425.github.io/modelimportance/",
+      "llms_txt_url": "https://mkim425.github.io/modelimportance/llms.txt"
+    }
+  ]
+}
