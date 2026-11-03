@@ -233,29 +233,43 @@ def r_dependents(org: str, token: str | None) -> list[dict]:
     return [r for r in records if r]
 
 
-def hubdocs_pages(org: str, token: str | None) -> list[dict]:
-    """Pages of docs.hubverse.io, from the hubDocs source tree.
+def markdown_pages(org: str, entry: dict, token: str | None) -> list[dict]:
+    """Markdown files of a repository named in the `markdown` list.
 
-    Note that Read the Docs does not publish page sources for this site,
-    so each page's Markdown is read from GitHub instead.
+    Each page links to its raw Markdown on GitHub. Note that Read the Docs
+    does not publish page sources for docs.hubverse.io, so this is how its
+    pages are indexed too. Returns no pages if the repository is not in the
+    org.
     """
+    repo = github_repo(f"{org}/{entry['repo']}", token)
+    if not repo:
+        return []
+    branch = repo["default_branch"]
     tree = fetch_json(
-        f"{API}/repos/{org}/hubDocs/git/trees/main?recursive=1", token
+        f"{API}/repos/{org}/{entry['repo']}/git/trees/{branch}?recursive=1",
+        token,
     )
-    prefix = "docs/source/"
+    root = entry.get("root", "")
+    include = tuple(entry.get("include", [""]))
+    exclude = tuple(entry.get("exclude", []))
     pages = []
     for item in tree["tree"]:
         path = item["path"]
-        if not (path.startswith(prefix) and path.endswith(".md")):
+        if not (path.startswith(root) and path.endswith(".md")):
             continue
-        rel = path[len(prefix):]
-        if rel.startswith(("_", "generated/")):
+        rel = path[len(root):]
+        if not rel.startswith(include) or (exclude and rel.startswith(exclude)):
             continue
+        if "rendered" in entry:
+            url = entry["rendered"] + rel[:-3] + ".html"
+        else:
+            url = f"{repo['html_url']}/blob/{branch}/{path}"
         pages.append({
-            "site": "docs.hubverse.io",
-            "url": DOCS_SITE + rel[:-3] + ".html",
+            "site": entry["site"],
+            "url": url,
             "markdown_url": (
-                f"https://raw.githubusercontent.com/{org}/hubDocs/main/{path}"
+                f"https://raw.githubusercontent.com/{org}/{entry['repo']}"
+                f"/{branch}/{path}"
             ),
             "section": rel.split("/")[0] if "/" in rel else "home",
         })
@@ -364,19 +378,25 @@ def render_llms_txt(
         "administrators, modelers and developers",
         "- [Mailing list and community meetings](https://groups.io/g/hubverse)",
         "",
-        "## Documentation (docs.hubverse.io)",
-        "",
     ]
-    for page in sorted(
-        (s for s in sources if s["site"] == "docs.hubverse.io"),
-        key=lambda s: s["url"],
-    ):
-        title = page.get("title") or page["url"].rsplit("/", 1)[-1]
-        lines.append(
-            f"- [{title}]({page['markdown_url']}): {page['section']}, "
-            f"rendered at {page['url']}"
+    for entry in config.get("markdown", []):
+        pages = sorted(
+            (s for s in sources if s["site"] == entry["site"]),
+            key=lambda s: s["url"],
         )
-    lines += ["", "## hubverse.io pages", ""]
+        if not pages:
+            continue
+        lines += [f"## {entry['title']}", ""]
+        if entry.get("summary"):
+            lines += [entry["summary"], ""]
+        for page in pages:
+            title = page.get("title") or page["url"].rsplit("/", 1)[-1]
+            lines.append(
+                f"- [{title}]({page['markdown_url']}): {page['section']}, "
+                f"rendered at {page['url']}"
+            )
+        lines.append("")
+    lines += ["## hubverse.io pages", ""]
     for page in (s for s in sources if s["site"] == "hubverse.io"):
         title = page.get("title") or page["url"]
         lines.append(f"- [{title}]({page['url']})")
@@ -494,7 +514,12 @@ def main() -> None:
           "hubverse", file=sys.stderr)
 
     links: set[str] = set()
-    sources = hubdocs_pages(args.org, args.token) + landing_pages()
+    sources = []
+    for entry in config.get("markdown", []):
+        sources += markdown_pages(args.org, entry, args.token)
+    titled_sites = {e["site"] for e in config.get("markdown", [])}
+    titled_sites.add("hubverse.io")
+    sources += landing_pages()
     with ThreadPoolExecutor(args.workers) as pool:
         indexed = [r for r in repos if r["llms_txt_url"]]
         for record, (_, text) in zip(indexed, pool.map(
@@ -503,11 +528,11 @@ def main() -> None:
             links |= extract_links(text)
     print(f"  {len(sources)} documentation pages", file=sys.stderr)
 
-    # Page titles are needed for every docs.hubverse.io and hubverse.io
-    # page. Package pages are fetched only to collect their links.
+    # Page titles are needed for every page listed individually in llms.txt.
+    # Package pages are fetched only to collect their links.
     to_fetch = [
         s for s in sources
-        if args.depth == 2 or s["site"] in {"docs.hubverse.io", "hubverse.io"}
+        if args.depth == 2 or s["site"] in titled_sites
     ]
     with ThreadPoolExecutor(args.workers) as pool:
         results = pool.map(
@@ -516,7 +541,7 @@ def main() -> None:
             source["status"] = status
             if status != 200:
                 continue
-            if source["site"] in {"docs.hubverse.io", "hubverse.io"}:
+            if source["site"] in titled_sites:
                 source["title"] = page_title(text)
             links |= extract_links(text, base=source["url"])
     broken = [s["url"] for s in to_fetch if s.get("status") != 200]

@@ -112,7 +112,7 @@ JSON schemas that define valid hub configuration files. Versioned; docs.hubverse
 
 ## Documentation and websites
 
-User and developer documentation, the public landing page and the org profile.
+User and developer documentation, the public landing page, the org profile, and the record of design decisions and project posters.
 
 - [hubDocs](https://github.com/hubverse-org/hubDocs): This is the source for docs.hubverse.io. It is built with ReadTheDocs; docs: https://docs.hubverse.io/en/latest/
 - [hubverse-site](https://github.com/hubverse-org/hubverse-site): Landing page for the hubverse; docs: https://hubverse.io/

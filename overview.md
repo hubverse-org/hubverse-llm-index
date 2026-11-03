@@ -50,7 +50,7 @@ The [hubverse](https://github.com/hubverse-org/hubverse) R meta-package installs
 
 ## Versioning
 
-Hub configuration files declare the schema version they follow. docs.hubverse.io documents one schema release at a time, and hubDocs release numbers match the schema release they track. Development practice, release processes and security policies are in the [developer guide](https://docs.hubverse.io/en/latest/developer/index.html).
+Hub configuration files declare the schema version they follow. docs.hubverse.io documents one schema release at a time, and hubDocs release numbers match the schema release they track. Development practice, release processes and security policies are in the [developer guide](https://docs.hubverse.io/en/latest/developer/index.html). The reasons behind design choices, and the scope of planned work, are recorded in [decisions](https://github.com/hubverse-org/decisions) as project posters, requests for comments and lightweight decision records.
 
 ## Getting help
 

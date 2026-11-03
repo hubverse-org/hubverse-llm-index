@@ -27,8 +27,8 @@ repos = ["schemas"]
 [[category]]
 key = "docs"
 title = "Documentation and websites"
-summary = "User and developer documentation, the public landing page and the org profile."
-repos = ["hubDocs", "hubverse-site", ".github"]
+summary = "User and developer documentation, the public landing page, the org profile, and the record of design decisions and project posters."
+repos = ["hubDocs", "hubverse-site", ".github", "decisions"]
 
 [[category]]
 key = "dashboards"
@@ -89,6 +89,24 @@ repos = [
   "hubverse-talk-usrse25",
 ]
 optional = true
+
+# Repositories whose Markdown files are listed one by one in llms.txt, in
+# this order. Paths in `include` and `exclude` are relative to `root`.
+# Without `rendered`, each page links to its GitHub view.
+[[markdown]]
+repo = "hubDocs"
+site = "docs.hubverse.io"
+title = "Documentation (docs.hubverse.io)"
+root = "docs/source/"
+exclude = ["_", "generated/"]
+rendered = "https://docs.hubverse.io/en/latest/"
+
+[[markdown]]
+repo = "decisions"
+site = "decisions"
+title = "Decisions and project posters"
+summary = "Project posters scope a piece of work. Requests for comments (RFC) and lightweight decision records (LDR) record design decisions and the reasons for them."
+include = ["decisions/", "project-posters/"]
 
 # Software outside hubverse-org that hubverse tools build on. Listed in
 # llms.txt in this order. `docs` is needed only when the repository's
