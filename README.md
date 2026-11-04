@@ -25,7 +25,7 @@ Point a tool at `llms.txt`:
 https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/llms.txt
 ```
 
-Each R package site publishes its own `llms.txt` that lists every reference page and article as Markdown. `llms.txt` here links to those, so a tool can go from the hubverse overview down to a single function's documentation in two hops. docs.hubverse.io does not publish Markdown, so its pages are linked to their Markdown source in hubDocs.
+docs.hubverse.io and each R package site publish their own `llms.txt` that lists every page as Markdown. `llms.txt` here links to those, so a tool can go from the hubverse overview down to a single function's documentation in two hops.
 
 A harness that restricts which URLs a model may fetch can build its allowlist from `catalog/domains.txt`.
 

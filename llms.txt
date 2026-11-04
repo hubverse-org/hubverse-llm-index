@@ -2,7 +2,7 @@
 
 > The hubverse is a set of open-source software and data standards for collaborative modeling hubs: repositories where teams submit forecasts or scenario projections in a shared format, which are then validated, stored, ensembled, evaluated and visualised. It is developed by the Consortium of Infectious Disease Modeling Hubs.
 
-This file indexes everything the hubverse publishes. Start with the overview. Each R package site has its own llms.txt that lists every reference page and vignette as Markdown. catalog/repos.json and catalog/sources.json hold the same information in machine-readable form, and catalog/domains.txt lists every domain the documentation links to.
+This file indexes everything the hubverse publishes. Start with the overview. docs.hubverse.io and each R package site have their own llms.txt that lists every page as Markdown. catalog/repos.json and catalog/sources.json hold the same information in machine-readable form, and catalog/domains.txt lists every domain the documentation links to.
 
 ## Overview
 
@@ -13,50 +13,88 @@ This file indexes everything the hubverse publishes. Start with the overview. Ea
 
 ## Documentation (docs.hubverse.io)
 
-- [Code of Conduct Committee](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/committee.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/committee.html
-- [Contributor Covenant Code of Conduct](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/covenant.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/covenant.html
-- [Enforcement manual](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/enforcement-manual.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/enforcement-manual.html
-- [AWS Onboarding (and Offboarding)](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/cloud-onboarding.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/cloud-onboarding.html
-- [Local Dashboard Workflow](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-local.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-local.html
-- [Evaluations dashboard](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-predevals.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-predevals.html
-- [Forecasts dashboard](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-predtimechart.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-predtimechart.html
-- [Generating the Dashboard Website](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-site.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-site.html
-- [Staging dashboard changes](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-staging.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-staging.html
-- [Dashboard Tools](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-tools.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-tools.html
-- [Dashboard operational workflows](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-workflows.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-workflows.html
-- [Releasing Hotfixes](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/hotfix.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/hotfix.html
-- [Developer Guide](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/index.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/index.html
-- [Python Development and Releases](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/python.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/python.html
-- [R Release Process](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/r.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/r.html
-- [Hubverse Release Process](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/release-process.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/release-process.html
-- [Security Policies](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/security.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/security.html
-- [The hubverse: open tools for collaborative modeling](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/index.md): home, rendered at https://docs.hubverse.io/en/latest/index.html
-- [Abbreviations](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/abbreviations.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/abbreviations.html
-- [How to cite](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/cite.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/cite.html
-- [Contact](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/contact.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/contact.html
-- [Terminology](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/terminology.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/terminology.html
-- [Who is the hubverse for?](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/who-uses-hubverse.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/who-uses-hubverse.html
-- [Setting up continuous integration via GitHub Actions](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/continuous-integration.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/continuous-integration.html
-- [Getting started](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/getting-started.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/getting-started.html
-- [Introduction](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/intro.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/intro.html
-- [Configuring model metadata](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/model-metadata-schema.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/model-metadata-schema.html
-- [Scripting task configuration](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/scripting-task-config.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/scripting-task-config.html
-- [Setting up a simple modeling hub](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/setting-up.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/setting-up.html
-- [Configuring tasks](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/tasks-config.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/tasks-config.html
-- [Uploading and validating config files](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/uploading-validating.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/uploading-validating.html
-- [Using the modeling hub](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/using-hub.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/using-hub.html
-- [Dashboards](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/dashboards.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/dashboards.html
-- [Data storage](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/data-storage.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/data-storage.html
-- [Hub configuration files](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/hub-config.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/hub-config.html
-- [Structure of hub repositories](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/hub-structure.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/hub-structure.html
-- [Overview](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/intro-data-formats.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/intro-data-formats.html
-- [Model abstracts](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-abstracts.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-abstracts.html
-- [Model metadata](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-metadata.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-metadata.html
-- [Model output](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-output.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-output.html
-- [Sample output type](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/sample-output-type.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/sample-output-type.html
-- [Software](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/software.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/software.html
-- [Target (observed) data](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/target-data.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/target-data.html
-- [Defining modeling tasks](https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/tasks.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/tasks.html
+Page index: https://docs.hubverse.io/en/latest/llms.txt
+
+- [Code of Conduct Committee](https://docs.hubverse.io/en/latest/_sources/coc/committee.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/committee.html
+- [Contributor Covenant Code of Conduct](https://docs.hubverse.io/en/latest/_sources/coc/covenant.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/covenant.html
+- [Enforcement manual](https://docs.hubverse.io/en/latest/_sources/coc/enforcement-manual.md): coc, rendered at https://docs.hubverse.io/en/latest/coc/enforcement-manual.html
+- [AWS Onboarding (and Offboarding)](https://docs.hubverse.io/en/latest/_sources/developer/cloud-onboarding.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/cloud-onboarding.html
+- [Local Dashboard Workflow](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-local.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-local.html
+- [Evaluations dashboard](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-predevals.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-predevals.html
+- [Forecasts dashboard](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-predtimechart.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-predtimechart.html
+- [Generating the Dashboard Website](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-site.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-site.html
+- [Staging dashboard changes](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-staging.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-staging.html
+- [Dashboard Tools](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-tools.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-tools.html
+- [Dashboard operational workflows](https://docs.hubverse.io/en/latest/_sources/developer/dashboard-workflows.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/dashboard-workflows.html
+- [Releasing Hotfixes](https://docs.hubverse.io/en/latest/_sources/developer/hotfix.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/hotfix.html
+- [Developer Guide](https://docs.hubverse.io/en/latest/_sources/developer/index.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/index.html
+- [Python Development and Releases](https://docs.hubverse.io/en/latest/_sources/developer/python.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/python.html
+- [R Release Process](https://docs.hubverse.io/en/latest/_sources/developer/r.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/r.html
+- [Hubverse Release Process](https://docs.hubverse.io/en/latest/_sources/developer/release-process.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/release-process.html
+- [Security Policies](https://docs.hubverse.io/en/latest/_sources/developer/security.md): developer, rendered at https://docs.hubverse.io/en/latest/developer/security.html
+- [The hubverse: open tools for collaborative modeling](https://docs.hubverse.io/en/latest/_sources/index.md): home, rendered at https://docs.hubverse.io/en/latest/index.html
+- [Abbreviations](https://docs.hubverse.io/en/latest/_sources/overview/abbreviations.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/abbreviations.html
+- [How to cite](https://docs.hubverse.io/en/latest/_sources/overview/cite.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/cite.html
+- [Contact](https://docs.hubverse.io/en/latest/_sources/overview/contact.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/contact.html
+- [Terminology](https://docs.hubverse.io/en/latest/_sources/overview/terminology.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/terminology.html
+- [Who is the hubverse for?](https://docs.hubverse.io/en/latest/_sources/overview/who-uses-hubverse.md): overview, rendered at https://docs.hubverse.io/en/latest/overview/who-uses-hubverse.html
+- [Setting up continuous integration via GitHub Actions](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/continuous-integration.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/continuous-integration.html
+- [Getting started](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/getting-started.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/getting-started.html
+- [Introduction](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/intro.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/intro.html
+- [Configuring model metadata](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/model-metadata-schema.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/model-metadata-schema.html
+- [Scripting task configuration](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/scripting-task-config.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/scripting-task-config.html
+- [Setting up a simple modeling hub](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/setting-up.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/setting-up.html
+- [Configuring tasks](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/tasks-config.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/tasks-config.html
+- [Uploading and validating config files](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/uploading-validating.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/uploading-validating.html
+- [Using the modeling hub](https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/using-hub.md): quickstart-hub-admin, rendered at https://docs.hubverse.io/en/latest/quickstart-hub-admin/using-hub.html
+- [Dashboards](https://docs.hubverse.io/en/latest/_sources/user-guide/dashboards.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/dashboards.html
+- [Data storage](https://docs.hubverse.io/en/latest/_sources/user-guide/data-storage.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/data-storage.html
+- [Hub configuration files](https://docs.hubverse.io/en/latest/_sources/user-guide/hub-config.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/hub-config.html
+- [Structure of hub repositories](https://docs.hubverse.io/en/latest/_sources/user-guide/hub-structure.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/hub-structure.html
+- [Overview](https://docs.hubverse.io/en/latest/_sources/user-guide/intro-data-formats.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/intro-data-formats.html
+- [Model abstracts](https://docs.hubverse.io/en/latest/_sources/user-guide/model-abstracts.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-abstracts.html
+- [Model metadata](https://docs.hubverse.io/en/latest/_sources/user-guide/model-metadata.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-metadata.html
+- [Model output](https://docs.hubverse.io/en/latest/_sources/user-guide/model-output.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/model-output.html
+- [Sample output type](https://docs.hubverse.io/en/latest/_sources/user-guide/sample-output-type.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/sample-output-type.html
+- [Software](https://docs.hubverse.io/en/latest/_sources/user-guide/software.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/software.html
+- [Target (observed) data](https://docs.hubverse.io/en/latest/_sources/user-guide/target-data.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/target-data.html
+- [Defining modeling tasks](https://docs.hubverse.io/en/latest/_sources/user-guide/tasks.md): user-guide, rendered at https://docs.hubverse.io/en/latest/user-guide/tasks.html
+
+## Decisions and project posters
+
+Project posters scope a piece of work. Requests for comments (RFC) and lightweight decision records (LDR) record design decisions and the reasons for them.
+
+- [2024-12-09 Record Decisions](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-09-rfc-record-decisions.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-09-rfc-record-decisions.md
+- [2024-12-11 target keys should contain single value](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-11-ldr-hubverse-target_keys.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-11-ldr-hubverse-target_keys.md
+- [2024-12-13 Evals Dashboard Underlying Architecture](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-13-ldr-eval-dashboard-structure.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-13-ldr-eval-dashboard-structure.md
+- [2024-12-13 Orchestration of the Dashboard Build Process](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-13-rfc-hub-dashboard-orchestration.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-13-rfc-hub-dashboard-orchestration.md
+- [2025-01-03 Additional columns in Variant Nowcast Hub target data](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-03-ldr-variant-nowcast-target-columns.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-03-ldr-variant-nowcast-target-columns.md
+- [2025-01-03 incorporate biobear package into Cladetime](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-03-rfc-cladetime-use-biobear.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-03-rfc-cladetime-use-biobear.md
+- [2025-01-06 Target data formats and organisation](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-06-rfc-target-data-formats.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-06-rfc-target-data-formats.md
+- [2025-01-08 Reichlab Software Release Process](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-08-rfc-reichlab-software-release.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-08-rfc-reichlab-software-release.md
+- [2025-01-13 Reich Lab Model Materials Storage](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-13-rfc-reichlab-model-materials-storage.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-13-rfc-reichlab-model-materials-storage.md
+- [2025-02-13 GitHub Action Security](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-13-rfc-github-action-security.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-13-rfc-github-action-security.md
+- [2025-02-19 Output type conversion functionality](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-19-ldr-output-type-conversions.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-19-ldr-output-type-conversions.md
+- [2025-02-27 Collect a list of shared lab accounts](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-27-ldr-list-shared-lab-accounts.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-27-ldr-list-shared-lab-accounts.md
+- [Time-series target data proposal](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-27-rfc-time-series-target-data.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-27-rfc-time-series-target-data.md
+- [2025-03-27 GitHub Action Security](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-03-27-rfc-github-action-security.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-03-27-rfc-github-action-security.md
+- [2025-03-09 Standardize Hubverse model-output directory name](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-04-09-standardize-model-output.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-04-09-standardize-model-output.md
+- [2025-04-16 Time Series Columns Allowed](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-04-16-LDR-time-series-columns.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-04-16-LDR-time-series-columns.md
+- [2025-06-17 RFC Time-series target data schema metadata](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-06-17-RFC-target-data-metadata.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-06-17-RFC-target-data-metadata.md
+- [2025-07-07 Standard Name for Non-Compound Task ID Set Variables](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-07-07-ldr-non-compound-task-id-set-name.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2025-07-07-ldr-non-compound-task-id-set-name.md
+- [2026-03-10 Streamlining Dashboard Release and Deployment](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2026-03-10-RFC-dashboard-release-deployment.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2026-03-10-RFC-dashboard-release-deployment.md
+- [2026-03-12 Claude Code Skills Management](https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2026-03-12-ldr-claude-code-skills-management.md): decisions, rendered at https://github.com/hubverse-org/decisions/blob/main/decisions/2026-03-12-ldr-claude-code-skills-management.md
+- [Project Poster: Cladetime](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/cladetime/cladetime.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/cladetime/cladetime.md
+- [Project Poster: [project name]](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/eval-dashboard/eval-dashboard.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/eval-dashboard/eval-dashboard.md
+- [Project Poster: Expanding Hubverse Evaluation Metrics and Dashboard Support](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/eval-metrics-expansion/eval-metrics-expansion.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/eval-metrics-expansion/eval-metrics-expansion.md
+- [Project Poster: The Hubverse Dashboard](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/hub-dashboard/hub-dashboard.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/hub-dashboard/hub-dashboard.md
+- [Project Poster: Python client for hubData](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/hub-data-python-client.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/hub-data-python-client.md
+- [Project Poster: Use IaC to manage the lab's AWS resources](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iac-for-aws-resources/iac-for-aws-resources.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/iac-for-aws-resources/iac-for-aws-resources.md
+- [Architecture Diagram](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/architecture.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/architecture.md
+- [Refactoring Design v4: iddata / idmodels / operational-models](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/design-finalized.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/design-finalized.md
+- [Project Poster: Iddata-Idmodels Refactoring](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/iddata-idmodels-refactor-poster.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/iddata-idmodels-refactor-poster.md
+- [Refactor Summary: `mc/idmodels-iddata-refactor`](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/refactor_summary.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/refactor_summary.md
+- [Project Poster: Output-type subclasses of `model_out_tbl`](https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/model-out-subclasses/model-out-subclasses.md): project-posters, rendered at https://github.com/hubverse-org/decisions/blob/main/project-posters/model-out-subclasses/model-out-subclasses.md
 
 ## hubverse.io pages
 
@@ -114,9 +152,10 @@ JSON schemas that define valid hub configuration files. Versioned; docs.hubverse
 
 User and developer documentation, the public landing page, the org profile, and the record of design decisions and project posters.
 
-- [hubDocs](https://github.com/hubverse-org/hubDocs): This is the source for docs.hubverse.io. It is built with ReadTheDocs; docs: https://docs.hubverse.io/en/latest/
+- [hubDocs](https://github.com/hubverse-org/hubDocs): This is the source for docs.hubverse.io. It is built with ReadTheDocs; page index: https://docs.hubverse.io/en/latest/llms.txt
 - [hubverse-site](https://github.com/hubverse-org/hubverse-site): Landing page for the hubverse; docs: https://hubverse.io/
 - [.github](https://github.com/hubverse-org/.github): Organisation profile; README: https://raw.githubusercontent.com/hubverse-org/.github/main/README.md
+- [decisions](https://github.com/hubverse-org/decisions): A public record of decisions made for lab projects; README: https://raw.githubusercontent.com/hubverse-org/decisions/main/README.md
 
 ## Dashboards
 
@@ -193,6 +232,7 @@ Packages outside hubverse-org, on CRAN or R-universe, that import hubverse packa
 - [Repository catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/repos.json)
 - [Related software catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/related.json)
 - [Documentation page catalog](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/sources.json)
+- [Full text of docs.hubverse.io](https://docs.hubverse.io/en/latest/llms-full.txt)
 - [Linked domains](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/domains.txt)
 - [Linked external URLs](https://raw.githubusercontent.com/hubverse-org/hubverse-llm-index/main/catalog/links.txt)
 

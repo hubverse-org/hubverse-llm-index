@@ -108,6 +108,20 @@
     "llms_txt_url": null
   },
   {
+    "name": "decisions",
+    "description": "A public record of decisions made for lab projects",
+    "category": "docs",
+    "archived": false,
+    "language": "HTML",
+    "topics": [],
+    "repo_url": "https://github.com/hubverse-org/decisions",
+    "issues_url": "https://github.com/hubverse-org/decisions/issues",
+    "readme_raw_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/README.md",
+    "default_branch": "main",
+    "docs_url": null,
+    "llms_txt_url": null
+  },
+  {
     "name": "example-complex-forecast-hub",
     "description": "An example of a forecast hub with a complex set of modeling tasks",
     "category": "example-hubs",
@@ -333,7 +347,7 @@
     "readme_raw_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/README.md",
     "default_branch": "main",
     "docs_url": "https://docs.hubverse.io/en/latest/",
-    "llms_txt_url": null
+    "llms_txt_url": "https://docs.hubverse.io/en/latest/llms.txt"
   },
   {
     "name": "hubEnsembles",

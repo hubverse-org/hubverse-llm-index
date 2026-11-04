@@ -38,10 +38,13 @@ API = "https://api.github.com"
 R_UNIVERSE_API = "https://r-universe.dev/api"
 HARD_DEPENDENCIES = {"Depends", "Imports", "LinkingTo"}
 DOCS_SITE = "https://docs.hubverse.io/en/latest/"
+DOCS_LLMS = urljoin(DOCS_SITE, "llms.txt")
+DOCS_LLMS_FULL = urljoin(DOCS_SITE, "llms-full.txt")
 LANDING_SITE = "https://hubverse.io/"
 URL_RE = re.compile(r"https?://[^\s<>\"'`)\]}]+")
 HREF_RE = re.compile(r"""href=["']([^"'#]+)""")
 MD_LINK_RE = re.compile(r"\]\(([^)\s]+)\)")
+MD_ITEM_RE = re.compile(r"^- \[(.+)\]\((\S+\.md)\)", re.MULTILINE)
 TITLE_MD_RE = re.compile(r"^(?:#\s+(.+)|(\S.*)\n[=]{3,})$", re.MULTILINE)
 TITLE_HTML_RE = re.compile(r"<title>([^<]+)</title>", re.IGNORECASE)
 HOST_RE = re.compile(r"^[a-z0-9-]+(\.[a-z0-9-]+)+$")
@@ -233,13 +236,16 @@ def r_dependents(org: str, token: str | None) -> list[dict]:
     return [r for r in records if r]
 
 
+def section(rel: str) -> str:
+    """Top-level directory of a page path, or "home" for a top-level page."""
+    return rel.split("/")[0] if "/" in rel else "home"
+
+
 def markdown_pages(org: str, entry: dict, token: str | None) -> list[dict]:
     """Markdown files of a repository named in the `markdown` list.
 
-    Each page links to its raw Markdown on GitHub. Note that Read the Docs
-    does not publish page sources for docs.hubverse.io, so this is how its
-    pages are indexed too. Returns no pages if the repository is not in the
-    org.
+    Each page links to its raw Markdown on GitHub. Returns no pages if the
+    repository is not in the org.
     """
     repo = github_repo(f"{org}/{entry['repo']}", token)
     if not repo:
@@ -249,29 +255,43 @@ def markdown_pages(org: str, entry: dict, token: str | None) -> list[dict]:
         f"{API}/repos/{org}/{entry['repo']}/git/trees/{branch}?recursive=1",
         token,
     )
-    root = entry.get("root", "")
     include = tuple(entry.get("include", [""]))
-    exclude = tuple(entry.get("exclude", []))
     pages = []
     for item in tree["tree"]:
         path = item["path"]
-        if not (path.startswith(root) and path.endswith(".md")):
+        if not (path.endswith(".md") and path.startswith(include)):
             continue
-        rel = path[len(root):]
-        if not rel.startswith(include) or (exclude and rel.startswith(exclude)):
-            continue
-        if "rendered" in entry:
-            url = entry["rendered"] + rel[:-3] + ".html"
-        else:
-            url = f"{repo['html_url']}/blob/{branch}/{path}"
         pages.append({
             "site": entry["site"],
-            "url": url,
+            "url": f"{repo['html_url']}/blob/{branch}/{path}",
             "markdown_url": (
                 f"https://raw.githubusercontent.com/{org}/{entry['repo']}"
                 f"/{branch}/{path}"
             ),
-            "section": rel.split("/")[0] if "/" in rel else "home",
+            "section": section(path),
+        })
+    return pages
+
+
+def docs_pages(text: str) -> list[dict]:
+    """Pages docs.hubverse.io lists in its llms.txt.
+
+    Each entry links to the page source that Sphinx publishes under
+    _sources/, and the rendered page is the same path with .html in place of
+    .md.
+    """
+    sources = urljoin(DOCS_SITE, "_sources/")
+    pages = []
+    for title, url in MD_ITEM_RE.findall(text):
+        if not url.startswith(sources):
+            continue
+        rel = url[len(sources):]
+        pages.append({
+            "site": "docs.hubverse.io",
+            "url": DOCS_SITE + rel[:-3] + ".html",
+            "markdown_url": url,
+            "section": section(rel),
+            "title": title,
         })
     return pages
 
@@ -347,6 +367,14 @@ def is_internal(url: str, org: str) -> bool:
     )
 
 
+def page_line(page: dict) -> str:
+    title = page.get("title") or page["url"].rsplit("/", 1)[-1]
+    return (
+        f"- [{title}]({page['markdown_url']}): {page['section']}, "
+        f"rendered at {page['url']}"
+    )
+
+
 def render_llms_txt(
     config: dict, repos: list[dict], related: dict, sources: list[dict],
     kb_base: str,
@@ -362,8 +390,8 @@ def render_llms_txt(
         "developed by the Consortium of Infectious Disease Modeling Hubs.",
         "",
         "This file indexes everything the hubverse publishes. Start with the "
-        "overview. Each R package site has its own llms.txt that lists every "
-        "reference page and vignette as Markdown. catalog/repos.json and "
+        "overview. docs.hubverse.io and each R package site have their own "
+        "llms.txt that lists every page as Markdown. catalog/repos.json and "
         "catalog/sources.json hold the same information in machine-readable "
         "form, and catalog/domains.txt lists every domain the documentation "
         "links to.",
@@ -378,7 +406,13 @@ def render_llms_txt(
         "administrators, modelers and developers",
         "- [Mailing list and community meetings](https://groups.io/g/hubverse)",
         "",
+        "## Documentation (docs.hubverse.io)",
+        "",
+        f"Page index: {DOCS_LLMS}",
+        "",
     ]
+    lines += [page_line(s) for s in sources if s["site"] == "docs.hubverse.io"]
+    lines.append("")
     for entry in config.get("markdown", []):
         pages = sorted(
             (s for s in sources if s["site"] == entry["site"]),
@@ -389,12 +423,7 @@ def render_llms_txt(
         lines += [f"## {entry['title']}", ""]
         if entry.get("summary"):
             lines += [entry["summary"], ""]
-        for page in pages:
-            title = page.get("title") or page["url"].rsplit("/", 1)[-1]
-            lines.append(
-                f"- [{title}]({page['markdown_url']}): {page['section']}, "
-                f"rendered at {page['url']}"
-            )
+        lines += [page_line(page) for page in pages]
         lines.append("")
     lines += ["## hubverse.io pages", ""]
     for page in (s for s in sources if s["site"] == "hubverse.io"):
@@ -456,6 +485,7 @@ def render_llms_txt(
         f"- [Repository catalog]({kb_base}catalog/repos.json)",
         f"- [Related software catalog]({kb_base}catalog/related.json)",
         f"- [Documentation page catalog]({kb_base}catalog/sources.json)",
+        f"- [Full text of docs.hubverse.io]({DOCS_LLMS_FULL})",
         f"- [Linked domains]({kb_base}catalog/domains.txt)",
         f"- [Linked external URLs]({kb_base}catalog/links.txt)",
         "",
@@ -524,8 +554,15 @@ def main() -> None:
         indexed = [r for r in repos if r["llms_txt_url"]]
         for record, (_, text) in zip(indexed, pool.map(
                 lambda r: fetch(r["llms_txt_url"]), indexed)):
-            sources += pkgdown_pages(record, text)
+            if record["llms_txt_url"] == DOCS_LLMS:
+                sources += docs_pages(text)
+            else:
+                sources += pkgdown_pages(record, text)
             links |= extract_links(text)
+    # The weekly refresh would otherwise open a pull request that removes
+    # every docs.hubverse.io page.
+    if not any(s["site"] == "docs.hubverse.io" for s in sources):
+        sys.exit(f"No docs.hubverse.io pages found through {DOCS_LLMS}")
     print(f"  {len(sources)} documentation pages", file=sys.stderr)
 
     # Page titles are needed for every page listed individually in llms.txt.

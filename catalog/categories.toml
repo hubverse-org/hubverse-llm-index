@@ -91,16 +91,7 @@ repos = [
 optional = true
 
 # Repositories whose Markdown files are listed one by one in llms.txt, in
-# this order. Paths in `include` and `exclude` are relative to `root`.
-# Without `rendered`, each page links to its GitHub view.
-[[markdown]]
-repo = "hubDocs"
-site = "docs.hubverse.io"
-title = "Documentation (docs.hubverse.io)"
-root = "docs/source/"
-exclude = ["_", "generated/"]
-rendered = "https://docs.hubverse.io/en/latest/"
-
+# this order. `include` limits them to paths with these prefixes.
 [[markdown]]
 repo = "decisions"
 site = "decisions"

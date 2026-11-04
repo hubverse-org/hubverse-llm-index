@@ -1,309 +1,526 @@
 [
   {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-09-rfc-record-decisions.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-09-rfc-record-decisions.md",
+    "section": "decisions",
+    "title": "2024-12-09 Record Decisions"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-11-ldr-hubverse-target_keys.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-11-ldr-hubverse-target_keys.md",
+    "section": "decisions",
+    "title": "2024-12-11 target keys should contain single value"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-13-ldr-eval-dashboard-structure.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-13-ldr-eval-dashboard-structure.md",
+    "section": "decisions",
+    "title": "2024-12-13 Evals Dashboard Underlying Architecture"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2024-12-13-rfc-hub-dashboard-orchestration.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2024-12-13-rfc-hub-dashboard-orchestration.md",
+    "section": "decisions",
+    "title": "2024-12-13 Orchestration of the Dashboard Build Process"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-03-ldr-variant-nowcast-target-columns.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-03-ldr-variant-nowcast-target-columns.md",
+    "section": "decisions",
+    "title": "2025-01-03 Additional columns in Variant Nowcast Hub target data"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-03-rfc-cladetime-use-biobear.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-03-rfc-cladetime-use-biobear.md",
+    "section": "decisions",
+    "title": "2025-01-03 incorporate biobear package into Cladetime"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-06-rfc-target-data-formats.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-06-rfc-target-data-formats.md",
+    "section": "decisions",
+    "title": "2025-01-06 Target data formats and organisation"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-08-rfc-reichlab-software-release.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-08-rfc-reichlab-software-release.md",
+    "section": "decisions",
+    "title": "2025-01-08 Reichlab Software Release Process"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-01-13-rfc-reichlab-model-materials-storage.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-01-13-rfc-reichlab-model-materials-storage.md",
+    "section": "decisions",
+    "title": "2025-01-13 Reich Lab Model Materials Storage"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-13-rfc-github-action-security.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-13-rfc-github-action-security.md",
+    "section": "decisions",
+    "title": "2025-02-13 GitHub Action Security"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-19-ldr-output-type-conversions.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-19-ldr-output-type-conversions.md",
+    "section": "decisions",
+    "title": "2025-02-19 Output type conversion functionality"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-27-ldr-list-shared-lab-accounts.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-27-ldr-list-shared-lab-accounts.md",
+    "section": "decisions",
+    "title": "2025-02-27 Collect a list of shared lab accounts"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-02-27-rfc-time-series-target-data.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-02-27-rfc-time-series-target-data.md",
+    "section": "decisions",
+    "title": "Time-series target data proposal"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-03-27-rfc-github-action-security.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-03-27-rfc-github-action-security.md",
+    "section": "decisions",
+    "title": "2025-03-27 GitHub Action Security"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-04-09-standardize-model-output.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-04-09-standardize-model-output.md",
+    "section": "decisions",
+    "title": "2025-03-09 Standardize Hubverse model-output directory name"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-04-16-LDR-time-series-columns.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-04-16-LDR-time-series-columns.md",
+    "section": "decisions",
+    "title": "2025-04-16 Time Series Columns Allowed"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-06-17-RFC-target-data-metadata.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-06-17-RFC-target-data-metadata.md",
+    "section": "decisions",
+    "title": "2025-06-17 RFC Time-series target data schema metadata"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2025-07-07-ldr-non-compound-task-id-set-name.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2025-07-07-ldr-non-compound-task-id-set-name.md",
+    "section": "decisions",
+    "title": "2025-07-07 Standard Name for Non-Compound Task ID Set Variables"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2026-03-10-RFC-dashboard-release-deployment.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2026-03-10-RFC-dashboard-release-deployment.md",
+    "section": "decisions",
+    "title": "2026-03-10 Streamlining Dashboard Release and Deployment"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/decisions/2026-03-12-ldr-claude-code-skills-management.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/decisions/2026-03-12-ldr-claude-code-skills-management.md",
+    "section": "decisions",
+    "title": "2026-03-12 Claude Code Skills Management"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/cladetime/cladetime.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/cladetime/cladetime.md",
+    "section": "project-posters",
+    "title": "Project Poster: Cladetime"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/eval-dashboard/eval-dashboard.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/eval-dashboard/eval-dashboard.md",
+    "section": "project-posters",
+    "title": "Project Poster: [project name]"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/eval-metrics-expansion/eval-metrics-expansion.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/eval-metrics-expansion/eval-metrics-expansion.md",
+    "section": "project-posters",
+    "title": "Project Poster: Expanding Hubverse Evaluation Metrics and Dashboard Support"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/hub-dashboard/hub-dashboard.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/hub-dashboard/hub-dashboard.md",
+    "section": "project-posters",
+    "title": "Project Poster: The Hubverse Dashboard"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/hub-data-python-client.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/hub-data-python-client.md",
+    "section": "project-posters",
+    "title": "Project Poster: Python client for hubData"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/iac-for-aws-resources/iac-for-aws-resources.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iac-for-aws-resources/iac-for-aws-resources.md",
+    "section": "project-posters",
+    "title": "Project Poster: Use IaC to manage the lab's AWS resources"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/architecture.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/architecture.md",
+    "section": "project-posters",
+    "title": "Architecture Diagram"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/design-finalized.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/design-finalized.md",
+    "section": "project-posters",
+    "title": "Refactoring Design v4: iddata / idmodels / operational-models"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/iddata-idmodels-refactor-poster.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/iddata-idmodels-refactor-poster.md",
+    "section": "project-posters",
+    "title": "Project Poster: Iddata-Idmodels Refactoring"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/iddata-idmodels-refactor/refactor_summary.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/iddata-idmodels-refactor/refactor_summary.md",
+    "section": "project-posters",
+    "title": "Refactor Summary: `mc/idmodels-iddata-refactor`"
+  },
+  {
+    "site": "decisions",
+    "url": "https://github.com/hubverse-org/decisions/blob/main/project-posters/model-out-subclasses/model-out-subclasses.md",
+    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/decisions/main/project-posters/model-out-subclasses/model-out-subclasses.md",
+    "section": "project-posters",
+    "title": "Project Poster: Output-type subclasses of `model_out_tbl`"
+  },
+  {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/coc/committee.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/committee.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/coc/committee.md",
     "section": "coc",
     "title": "Code of Conduct Committee"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/coc/covenant.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/covenant.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/coc/covenant.md",
     "section": "coc",
     "title": "Contributor Covenant Code of Conduct"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/coc/enforcement-manual.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/coc/enforcement-manual.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/coc/enforcement-manual.md",
     "section": "coc",
     "title": "Enforcement manual"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/cloud-onboarding.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/cloud-onboarding.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/cloud-onboarding.md",
     "section": "developer",
     "title": "AWS Onboarding (and Offboarding)"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-local.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-local.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-local.md",
     "section": "developer",
     "title": "Local Dashboard Workflow"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-predevals.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-predevals.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-predevals.md",
     "section": "developer",
     "title": "Evaluations dashboard"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-predtimechart.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-predtimechart.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-predtimechart.md",
     "section": "developer",
     "title": "Forecasts dashboard"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-site.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-site.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-site.md",
     "section": "developer",
     "title": "Generating the Dashboard Website"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-staging.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-staging.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-staging.md",
     "section": "developer",
     "title": "Staging dashboard changes"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-tools.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-tools.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-tools.md",
     "section": "developer",
     "title": "Dashboard Tools"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/dashboard-workflows.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/dashboard-workflows.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/dashboard-workflows.md",
     "section": "developer",
     "title": "Dashboard operational workflows"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/hotfix.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/hotfix.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/hotfix.md",
     "section": "developer",
     "title": "Releasing Hotfixes"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/index.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/index.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/index.md",
     "section": "developer",
     "title": "Developer Guide"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/python.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/python.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/python.md",
     "section": "developer",
     "title": "Python Development and Releases"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/r.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/r.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/r.md",
     "section": "developer",
     "title": "R Release Process"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/release-process.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/release-process.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/release-process.md",
     "section": "developer",
     "title": "Hubverse Release Process"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/developer/security.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/developer/security.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/developer/security.md",
     "section": "developer",
     "title": "Security Policies"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/index.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/index.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/index.md",
     "section": "home",
     "title": "The hubverse: open tools for collaborative modeling"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/overview/abbreviations.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/abbreviations.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/overview/abbreviations.md",
     "section": "overview",
     "title": "Abbreviations"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/overview/cite.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/cite.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/overview/cite.md",
     "section": "overview",
     "title": "How to cite"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/overview/contact.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/contact.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/overview/contact.md",
     "section": "overview",
     "title": "Contact"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/overview/terminology.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/terminology.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/overview/terminology.md",
     "section": "overview",
     "title": "Terminology"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/overview/who-uses-hubverse.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/overview/who-uses-hubverse.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/overview/who-uses-hubverse.md",
     "section": "overview",
     "title": "Who is the hubverse for?"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/continuous-integration.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/continuous-integration.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/continuous-integration.md",
     "section": "quickstart-hub-admin",
     "title": "Setting up continuous integration via GitHub Actions"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/getting-started.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/getting-started.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/getting-started.md",
     "section": "quickstart-hub-admin",
     "title": "Getting started"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/intro.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/intro.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/intro.md",
     "section": "quickstart-hub-admin",
     "title": "Introduction"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/model-metadata-schema.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/model-metadata-schema.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/model-metadata-schema.md",
     "section": "quickstart-hub-admin",
     "title": "Configuring model metadata"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/scripting-task-config.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/scripting-task-config.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/scripting-task-config.md",
     "section": "quickstart-hub-admin",
     "title": "Scripting task configuration"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/setting-up.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/setting-up.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/setting-up.md",
     "section": "quickstart-hub-admin",
     "title": "Setting up a simple modeling hub"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/tasks-config.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/tasks-config.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/tasks-config.md",
     "section": "quickstart-hub-admin",
     "title": "Configuring tasks"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/uploading-validating.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/uploading-validating.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/uploading-validating.md",
     "section": "quickstart-hub-admin",
     "title": "Uploading and validating config files"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/quickstart-hub-admin/using-hub.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/quickstart-hub-admin/using-hub.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/quickstart-hub-admin/using-hub.md",
     "section": "quickstart-hub-admin",
     "title": "Using the modeling hub"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/dashboards.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/dashboards.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/dashboards.md",
     "section": "user-guide",
     "title": "Dashboards"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/data-storage.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/data-storage.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/data-storage.md",
     "section": "user-guide",
     "title": "Data storage"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/hub-config.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/hub-config.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/hub-config.md",
     "section": "user-guide",
     "title": "Hub configuration files"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/hub-structure.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/hub-structure.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/hub-structure.md",
     "section": "user-guide",
     "title": "Structure of hub repositories"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/intro-data-formats.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/intro-data-formats.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/intro-data-formats.md",
     "section": "user-guide",
     "title": "Overview"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/model-abstracts.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-abstracts.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/model-abstracts.md",
     "section": "user-guide",
     "title": "Model abstracts"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/model-metadata.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-metadata.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/model-metadata.md",
     "section": "user-guide",
     "title": "Model metadata"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/model-output.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/model-output.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/model-output.md",
     "section": "user-guide",
     "title": "Model output"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/sample-output-type.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/sample-output-type.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/sample-output-type.md",
     "section": "user-guide",
     "title": "Sample output type"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/software.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/software.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/software.md",
     "section": "user-guide",
     "title": "Software"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/target-data.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/target-data.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/target-data.md",
     "section": "user-guide",
     "title": "Target (observed) data"
   },
   {
     "site": "docs.hubverse.io",
     "url": "https://docs.hubverse.io/en/latest/user-guide/tasks.html",
-    "markdown_url": "https://raw.githubusercontent.com/hubverse-org/hubDocs/main/docs/source/user-guide/tasks.md",
+    "markdown_url": "https://docs.hubverse.io/en/latest/_sources/user-guide/tasks.md",
     "section": "user-guide",
     "title": "Defining modeling tasks"
   },
