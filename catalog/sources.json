@@ -934,8 +934,26 @@
   },
   {
     "site": "hubDevs",
+    "url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_codeowners.md",
+    "markdown_url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_codeowners.md",
+    "section": "reference"
+  },
+  {
+    "site": "hubDevs",
+    "url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_codeql.md",
+    "markdown_url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_codeql.md",
+    "section": "reference"
+  },
+  {
+    "site": "hubDevs",
     "url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_community.md",
     "markdown_url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_community.md",
+    "section": "reference"
+  },
+  {
+    "site": "hubDevs",
+    "url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_dependabot.md",
+    "markdown_url": "https://hubverse-org.github.io/hubDevs/reference/use_hubdev_dependabot.md",
     "section": "reference"
   },
   {
@@ -1144,9 +1162,9 @@
   },
   {
     "site": "hubStyle",
-    "url": "https://hubverse-org.github.io/hubStyle/test_1.md",
-    "markdown_url": "https://hubverse-org.github.io/hubStyle/test_1.md",
-    "section": "hubStyle"
+    "url": "https://hubverse-org.github.io/hubStyle/articles/test_1.md",
+    "markdown_url": "https://hubverse-org.github.io/hubStyle/articles/test_1.md",
+    "section": "articles"
   },
   {
     "site": "hubUtils",

@@ -542,6 +542,8 @@ https://plotly.com
 https://pola.rs
 https://posit-dev.github.io/air/
 https://posit-dev.github.io/air/editor-rstudio.html
+https://posit-dev.github.io/air/editors.html
+https://posit-dev.github.io/air/integration-github-actions.html
 https://posit.co/download/rstudio-desktop/
 https://pubmed.ncbi.nlm.nih.gov/24714027/
 https://purge.jsdelivr.net/gh/hubverse-org/predevals/dist/predevals.bundle.js

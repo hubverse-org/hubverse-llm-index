@@ -49,7 +49,7 @@ docs.aws.amazon.com	2
 docs.docker.com	1
 docs.github.com	46
 docs.google.com	3
-docs.hubverse.io	84
+docs.hubverse.io	85
 docs.netlify.com	3
 docs.nextstrain.org	4
 docs.pola.rs	1
@@ -80,7 +80,7 @@ glitch.com	1
 groups.io	1
 happygitwithr.com	1
 htmlpreview.github.io	7
-hubverse-org.github.io	338
+hubverse-org.github.io	347
 hubverse-org.r-universe.dev	13
 hubverse.io	70
 hubverse.s3.amazonaws.com	1
@@ -115,7 +115,7 @@ plausible.io	1
 plot.ly	1
 plotly.com	1
 pola.rs	1
-posit-dev.github.io	2
+posit-dev.github.io	4
 posit.co	1
 pubmed.ncbi.nlm.nih.gov	1
 purge.jsdelivr.net	4
