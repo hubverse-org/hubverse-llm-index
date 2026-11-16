@@ -48,6 +48,7 @@ https://avatars.githubusercontent.com/u/144363181?v=4
 https://avatars.githubusercontent.com/u/161043623?v=4
 https://avatars.githubusercontent.com/u/174707?v=4
 https://avatars.githubusercontent.com/u/24431085?v=4
+https://avatars.githubusercontent.com/u/25701408?v=4
 https://avatars.githubusercontent.com/u/3639446?v=4
 https://avatars.githubusercontent.com/u/37978797?v=4
 https://avatars.githubusercontent.com/u/38393480?v=4
@@ -489,6 +490,7 @@ https://github.com/sjfox/ATSF2026/tree/HEAD/model-output
 https://github.com/sjfox/ATSF2026/tree/HEAD/model-output#readme
 https://github.com/sjfox/microhub-workshop
 https://github.com/the-turing-way/the-turing-way/releases/tag/untagged-88f773236dfcdb1e00f4
+https://github.com/trobacker
 https://github.com/wheretrue/biobear
 https://github.com/zkamvar
 https://gitlab.com/harryhoch
@@ -542,6 +544,8 @@ https://plotly.com
 https://pola.rs
 https://posit-dev.github.io/air/
 https://posit-dev.github.io/air/editor-rstudio.html
+https://posit-dev.github.io/air/editors.html
+https://posit-dev.github.io/air/integration-github-actions.html
 https://posit.co/download/rstudio-desktop/
 https://pubmed.ncbi.nlm.nih.gov/24714027/
 https://purge.jsdelivr.net/gh/hubverse-org/predevals/dist/predevals.bundle.js
