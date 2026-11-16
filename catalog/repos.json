@@ -615,7 +615,7 @@
     "issues_url": "https://github.com/hubverse-org/hubverse-org.r-universe.dev/issues",
     "readme_raw_url": "https://raw.githubusercontent.com/hubverse-org/hubverse-org.r-universe.dev/main/README.md",
     "default_branch": "main",
-    "docs_url": "https://hubverse-org.r-universe.dev/",
+    "docs_url": null,
     "llms_txt_url": null
   },
   {
