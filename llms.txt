@@ -188,7 +188,7 @@ GitHub Actions for hubs and packages, package scaffolding, pkgdown styling, heal
 - [hubDevs](https://github.com/hubverse-org/hubDevs): Utilities for creating and standardising Hubverse packages; page index: https://hubverse-org.github.io/hubDevs/llms.txt
 - [hubStyle](https://github.com/hubverse-org/hubStyle): pkgdown template and utilities for hubverse docs; page index: https://hubverse-org.github.io/hubStyle/llms.txt
 - [pkg-health-check](https://github.com/hubverse-org/pkg-health-check): Workflows to regularly check the health of hubverse packages; README: https://raw.githubusercontent.com/hubverse-org/pkg-health-check/main/README.md
-- [hubverse-org.r-universe.dev](https://github.com/hubverse-org/hubverse-org.r-universe.dev): R-Universe configuration for the HubVerse; docs: https://hubverse-org.r-universe.dev/
+- [hubverse-org.r-universe.dev](https://github.com/hubverse-org/hubverse-org.r-universe.dev): R-Universe configuration for the HubVerse; README: https://raw.githubusercontent.com/hubverse-org/hubverse-org.r-universe.dev/main/README.md
 - [test-docker-hubUtils-dev](https://github.com/hubverse-org/test-docker-hubUtils-dev): [test] containerized hubUtils (development version); README: https://raw.githubusercontent.com/hubverse-org/test-docker-hubUtils-dev/main/README.md
 - [test-docker-hubValidations](https://github.com/hubverse-org/test-docker-hubValidations): [test] containerized hubValidations; README: https://raw.githubusercontent.com/hubverse-org/test-docker-hubValidations/main/README.md
 

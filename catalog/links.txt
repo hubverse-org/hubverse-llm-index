@@ -48,6 +48,7 @@ https://avatars.githubusercontent.com/u/144363181?v=4
 https://avatars.githubusercontent.com/u/161043623?v=4
 https://avatars.githubusercontent.com/u/174707?v=4
 https://avatars.githubusercontent.com/u/24431085?v=4
+https://avatars.githubusercontent.com/u/25701408?v=4
 https://avatars.githubusercontent.com/u/3639446?v=4
 https://avatars.githubusercontent.com/u/37978797?v=4
 https://avatars.githubusercontent.com/u/38393480?v=4
@@ -102,8 +103,8 @@ https://creativecommons.org/licenses/by/4.0/
 https://crontab.guru
 https://crontab.guru/#37_16_*_*_5
 https://curl.se
-https://dailypartita.github.io/China-COVID-19-Forecast-Dashboard/eval.html
-https://dailypartita.github.io/China-COVID-19-Forecast-Dashboard/forecast.html
+https://dailypartita.github.io/China-Infectious-Disease-Forecast-Dashboard/eval.html
+https://dailypartita.github.io/China-Infectious-Disease-Forecast-Dashboard/forecast.html
 https://damon.phd/
 https://delphi.cmu.edu/epidata/v5/docs
 https://delphi.cmu.edu/forecast-eval/
@@ -306,10 +307,10 @@ https://github.com/cdphmodeling/wnvca-2024
 https://github.com/cdphmodeling/wnvca-2024#readme
 https://github.com/cdphmodeling/wnvca-2024/tree/HEAD/model-output
 https://github.com/cdphmodeling/wnvca-2024/tree/HEAD/model-output#readme
-https://github.com/dailypartita/China-COVID-19-Forecast-Hub
-https://github.com/dailypartita/China-COVID-19-Forecast-Hub#readme
-https://github.com/dailypartita/China-COVID-19-Forecast-Hub/tree/HEAD/model-output
-https://github.com/dailypartita/China-COVID-19-Forecast-Hub/tree/HEAD/model-output#readme
+https://github.com/dailypartita/China-Infectious-Disease-Forecast-Hub
+https://github.com/dailypartita/China-Infectious-Disease-Forecast-Hub#readme
+https://github.com/dailypartita/China-Infectious-Disease-Forecast-Hub/tree/HEAD/model-output
+https://github.com/dailypartita/China-Infectious-Disease-Forecast-Hub/tree/HEAD/model-output#readme
 https://github.com/damonbayer
 https://github.com/docker/build-push-action
 https://github.com/dylanhmorris
@@ -489,6 +490,7 @@ https://github.com/sjfox/ATSF2026/tree/HEAD/model-output
 https://github.com/sjfox/ATSF2026/tree/HEAD/model-output#readme
 https://github.com/sjfox/microhub-workshop
 https://github.com/the-turing-way/the-turing-way/releases/tag/untagged-88f773236dfcdb1e00f4
+https://github.com/trobacker
 https://github.com/wheretrue/biobear
 https://github.com/zkamvar
 https://gitlab.com/harryhoch
@@ -542,6 +544,8 @@ https://plotly.com
 https://pola.rs
 https://posit-dev.github.io/air/
 https://posit-dev.github.io/air/editor-rstudio.html
+https://posit-dev.github.io/air/editors.html
+https://posit-dev.github.io/air/integration-github-actions.html
 https://posit.co/download/rstudio-desktop/
 https://pubmed.ncbi.nlm.nih.gov/24714027/
 https://purge.jsdelivr.net/gh/hubverse-org/predevals/dist/predevals.bundle.js
